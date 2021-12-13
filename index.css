@@ -1,0 +1,67 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#calendar{
+    /*border-style: solid;*/
+    padding: 30px;
+    width: 27%;
+}
+
+#prevMonth{
+    width: 10%;
+    float: left;
+}
+
+#monthYear{
+    width: 80%;
+    float: left;
+    text-align: center;
+}
+
+#nextMonth{
+    width: 10%;
+    float: left;
+}
+
+#month{
+    font-size: 75px;
+    text-transform: uppercase;
+    color: #2C2589;
+    font-weight: bold;
+}
+
+#year{
+    font-size: 55px;
+    font-weight: bold;
+    color: #C70039;
+}
+
+table{
+    width: 100%;
+}
+
+thead{
+    background-color: #2C2589;
+    color: white;
+    text-transform: uppercase;
+}
+
+th{
+    padding: 10px 20px 10px 20px;
+}
+
+.day{
+    font-size: 50px;
+    color: #2C2589;
+    font-weight: bold;
+    text-align: center;
+}
+
+.otherMonth{
+    color: #cacaca;
+}
+
+.holiday{
+    color: #C70039;
+}

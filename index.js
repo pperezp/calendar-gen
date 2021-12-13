@@ -34,18 +34,26 @@ function generateCalendar(month, year) {
         let weekTr = document.createElement("tr");
         weekTr.className = "week";
 
-        for (let j = 1; j <= 7; j++) {
-            if (day <= monthLength && (i > 0 || j >= firstDayWeekday)) {
-                weekTr.appendChild(generateDayTd(day, "day"));
+        let dayTd;
+
+        for (let dayNumber = 1; dayNumber <= 7; dayNumber++) {
+            if (day <= monthLength && (i > 0 || dayNumber >= firstDayWeekday)) {
+                dayTd = generateDayTd(day, "day");
                 day++;
             } else if (day <= monthLength) {
                 let html = previousMonthLength - firstDayWeekday + prev + 1;
-                weekTr.appendChild(generateDayTd(html, "day otherMonth"));
+                dayTd = generateDayTd(html, "day otherMonth");
                 prev++;
             } else {
-                weekTr.appendChild(generateDayTd(next, "day otherMonth"));
+                dayTd = generateDayTd(next, "day otherMonth");
                 next++;
             }
+
+            if (dayNumber == 7 && !dayTd.className.includes("otherMonth")){
+                dayTd.classList.add("holiday");
+            }
+
+            weekTr.appendChild(dayTd);
         }
 
         tbody.appendChild(weekTr);
@@ -73,4 +81,4 @@ function generateDayTd(html, className) {
     return dayTd;
 }
 
-generateCalendar();
+generateCalendar(1, 2022);
