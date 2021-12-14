@@ -1,11 +1,14 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #c7c7c7;
 }
 
 #calendar{
-    /*border-style: solid;*/
     padding: 30px;
-    width: 27%;
+    width: 794px;
+    transition: 0.5s;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgb(92, 92, 92);
 }
 
 #prevMonth{
@@ -25,6 +28,7 @@ body{
 }
 
 #month{
+    transition: 0.5s;
     font-size: 75px;
     text-transform: uppercase;
     color: #2C2589;
@@ -32,6 +36,7 @@ body{
 }
 
 #year{
+    transition: 0.5s;
     font-size: 55px;
     font-weight: bold;
     color: #C70039;
@@ -41,7 +46,8 @@ table{
     width: 100%;
 }
 
-thead{
+.dayTitle{
+    transition: 0.5s;
     background-color: #2C2589;
     color: white;
     text-transform: uppercase;
@@ -52,6 +58,7 @@ th{
 }
 
 .day{
+    transition: 0.5s;
     font-size: 50px;
     color: #2C2589;
     font-weight: bold;
@@ -64,4 +71,84 @@ th{
 
 .holiday{
     color: #C70039;
+}
+
+@media screen and (max-width: 900px){
+    #calendar{
+        transition: 0.5s;
+        width: 440px;
+    }
+
+    #month{
+        transition: 0.5s;
+        font-size: 45px;
+    }
+
+    #year{
+        transition: 0.5s;
+        font-size: 35px;
+    }
+
+    .day{
+        transition: 0.5s;
+        font-size: 30px;
+    }
+
+    .otherMonth{
+        color: #cacaca;
+    }
+    
+    .holiday{
+        color: #C70039;
+    }
+
+    .dayTitle{
+        transition: 0.5s;
+        font-size: 10px;
+        padding: 7px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    #calendar{
+        transition: 0.5s;
+        width: 220px;
+        padding: 18px;
+    }
+
+    #month{
+        transition: 0.5s;
+        font-size: 25px;
+    }
+
+    #year{
+        transition: 0.5s;
+        font-size: 20px;
+    }
+
+    .day{
+        transition: 0.5s;
+        font-size: 15px;
+    }
+
+    .otherMonth{
+        color: #cacaca;
+    }
+    
+    .holiday{
+        color: #C70039;
+    }
+
+    .dayTitle{
+        transition: 0.5s;
+        font-size: 10px;
+        padding: 4px;
+    }
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

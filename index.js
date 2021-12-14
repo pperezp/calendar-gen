@@ -2,7 +2,7 @@ let monthDiv = document.querySelector("#month");
 let yearDiv = document.querySelector("#year");
 let weekDaysTr = document.querySelector("#weekDays");
 let tbody = document.querySelector("tbody");
-let daysLables = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+let daysLables = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
 let monthsLabels = ['Enero', 'Febrero', 'Marzo',
     'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto',
     'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
@@ -68,6 +68,7 @@ function generateDaysTitles() {
     for (let i = 0; i <= 6; i++) {
         let dayTh = document.createElement("th");
         dayTh.innerHTML = daysLables[i];
+        dayTh.classList.add("dayTitle");
         weekDaysTr.appendChild(dayTh);
     }
 }
@@ -81,4 +82,4 @@ function generateDayTd(html, className) {
     return dayTd;
 }
 
-generateCalendar(1, 2022);
+generateCalendar();
