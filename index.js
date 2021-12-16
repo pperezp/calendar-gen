@@ -11,6 +11,18 @@ let monthsLabels = ['Enero', 'Febrero', 'Marzo',
 let currentYear;
 let currentMonth;
 
+prevMonthButton.addEventListener("click", () => {
+    currentMonth = (currentMonth == 1 ? 12 : currentMonth - 1);
+    currentYear = (currentMonth == 12 ? currentYear - 1 : currentYear);
+    generateCalendar(currentMonth, currentYear);
+});
+
+nextMonthButton.addEventListener("click", () => {
+    currentMonth = (currentMonth == 12 ? 1 : currentMonth + 1);
+    currentYear = (currentMonth == 1 ? currentYear + 1 : currentYear);
+    generateCalendar(currentMonth, currentYear);
+});
+
 function generateCalendar(month, year) {
     tbody.innerHTML = "";
     weekDaysTr.innerHTML = "";
@@ -88,9 +100,8 @@ function generateDayTd(html, className) {
     return dayTd;
 }
 
-generateCalendar();
 
-/*
 currentYear = new Date().getFullYear();
 currentMonth = new Date().getMonth() + 1;
-*/
+
+generateCalendar(currentMonth, currentYear);

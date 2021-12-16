@@ -26,6 +26,7 @@ body{
 #calendar{
     padding: 30px;
     width: 794px;
+    height: 562px;
     transition: 0.5s;
     background-color: var(--calendar-bg-color);
     /*box-shadow: 5px 5px 10px rgb(92, 92, 92);*/
