@@ -2,12 +2,18 @@ let monthDiv = document.querySelector("#month");
 let yearDiv = document.querySelector("#year");
 let weekDaysTr = document.querySelector("#weekDays");
 let tbody = document.querySelector("tbody");
+let prevMonthButton = document.querySelector("#prevMonthButton");
+let nextMonthButton = document.querySelector("#nextMonthButton");
 let daysLables = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
 let monthsLabels = ['Enero', 'Febrero', 'Marzo',
     'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto',
     'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+let currentYear;
+let currentMonth;
 
 function generateCalendar(month, year) {
+    tbody.innerHTML = "";
+    weekDaysTr.innerHTML = "";
     let now = new Date();
 
     this.month = (isNaN(month) || month == null) ? now.getMonth() + 1 : month;
@@ -83,3 +89,8 @@ function generateDayTd(html, className) {
 }
 
 generateCalendar();
+
+/*
+currentYear = new Date().getFullYear();
+currentMonth = new Date().getMonth() + 1;
+*/

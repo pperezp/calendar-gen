@@ -1,14 +1,34 @@
+:root{
+    /*--body-bg-color: #c7c7c7;*/
+    /*--month-color: #2C2589;*/
+    /*--year-color: #C70039;*/
+    /*--day-title-bg-color: #2C2589;*/
+    /*--day-title-color: white;*/
+    /*--day-color: #2C2589*/
+    /*--other-month-color: #cacaca;*/
+    /*--holiday-color: #C70039;*/
+    --body-bg-color: rgb(32, 32, 32);
+    --calendar-bg-color:  rgb(32, 32, 32);
+    --month-color: #4c64cc;
+    --year-color: #a10b0b;
+    --day-title-bg-color: #4c64cc;
+    --day-title-color: rgb(189, 189, 189);
+    --day-color: #4c64cc;
+    --other-month-color: #474747;
+    --holiday-color: #a10b0b;
+}
+
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #c7c7c7;
+    background-color: var(--body-bg-color);
 }
 
 #calendar{
     padding: 30px;
     width: 794px;
     transition: 0.5s;
-    background-color: white;
-    box-shadow: 5px 5px 10px rgb(92, 92, 92);
+    background-color: var(--calendar-bg-color);
+    /*box-shadow: 5px 5px 10px rgb(92, 92, 92);*/
 }
 
 #prevMonth{
@@ -31,7 +51,7 @@ body{
     transition: 0.5s;
     font-size: 75px;
     text-transform: uppercase;
-    color: #2C2589;
+    color: var(--month-color);
     font-weight: bold;
 }
 
@@ -39,7 +59,7 @@ body{
     transition: 0.5s;
     font-size: 55px;
     font-weight: bold;
-    color: #C70039;
+    color: var(--year-color);
 }
 
 table{
@@ -48,8 +68,8 @@ table{
 
 .dayTitle{
     transition: 0.5s;
-    background-color: #2C2589;
-    color: white;
+    background-color: var(--day-title-bg-color);
+    color: var(--day-title-color);
     text-transform: uppercase;
 }
 
@@ -60,17 +80,17 @@ th{
 .day{
     transition: 0.5s;
     font-size: 50px;
-    color: #2C2589;
+    color: var(--day-color);
     font-weight: bold;
     text-align: center;
 }
 
 .otherMonth{
-    color: #cacaca;
+    color: var(--other-month-color);
 }
 
 .holiday{
-    color: #C70039;
+    color: var(--holiday-color);
 }
 
 @media screen and (max-width: 900px){
@@ -95,11 +115,11 @@ th{
     }
 
     .otherMonth{
-        color: #cacaca;
+        color: var(--other-month-color);
     }
     
     .holiday{
-        color: #C70039;
+        color: var(--holiday-color);
     }
 
     .dayTitle{
@@ -132,11 +152,11 @@ th{
     }
 
     .otherMonth{
-        color: #cacaca;
+        color: var(--other-month-color);
     }
     
     .holiday{
-        color: #C70039;
+        color: var(--holiday-color);
     }
 
     .dayTitle{
